@@ -9,7 +9,6 @@ import javax.swing.JPanel;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-
 /*
 *   This code should not be modified as it's meant to do the heavy lifting to
 *   get a simple game up and running. Feel free to explore and ask your teacher
@@ -50,7 +49,6 @@ public class GBSGame extends JPanel implements Runnable, KeyListener {
         f.setVisible(true);
         f.addKeyListener(this);
         f.setFocusable(true);
-        
         startGameThread();
     }
 
@@ -93,8 +91,9 @@ public class GBSGame extends JPanel implements Runnable, KeyListener {
 
     @Override
     protected void paintComponent(Graphics g) {
-        //super.paintComponent(g);
+        super.paintComponent(g);
         draw(g);
+
     }
 
     public static boolean keyDown(String key) {
